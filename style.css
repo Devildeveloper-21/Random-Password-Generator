@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.outer-container{
+    border: 1px solid black;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+.inner-container{
+    border: 1px solid black;
+    height: 20rem;
+    width: 20rem;
+    margin: auto;
+}
