@@ -3,15 +3,25 @@
     padding: 0;
 }
 .outer-container{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     height: 100vh;
     width: 100vw;
     display: flex;
     justify-content: center;
+    background-color: #9A6ADD;
 }
 .inner-container{
-    border: 1px solid black;
-    height: 20rem;
-    width: 20rem;
+    /* border: 1px solid black; */
+    height: 26rem;
+    width: 25rem;
     margin: auto;
+    background-color: #EFE8FF;
+    border-radius: .6rem;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+.div-title{
+    font-size: 2.6rem;
+    font-weight: bold;
 }
