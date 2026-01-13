@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Password Generator</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="outer-container">
-        <div class="inner-container">
-            <div class="div-title">Password Generator</div>
+      <div class="inner-container">
+        <div class="div-title">Password Generator</div>
+        <div class="lengthGroup">
+          <div class="display-length-box">20</div>
+          <div class="length-range-bar">
+            <input type="range" id="passwordLength" />
+          </div>
         </div>
+      </div>
     </div>
-</body>
+  </body>
+  <script type="module" src="script.js"></script>
 </html>
