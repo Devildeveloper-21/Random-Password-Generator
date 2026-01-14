@@ -8,7 +8,7 @@
     width: 100vw;
     display: flex;
     justify-content: center;
-    background-color: #9A6ADD;
+    background-color: #C8AEED;
 }
 .inner-container{
     /* border: 1px solid black; */
@@ -18,41 +18,74 @@
     background-color: #EFE8FF;
     border-radius: .6rem;
     padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .4rem 0 ;
 }
+
+/* Password Generator Title */
 .div-title{
-    width: 100%;
     /* border: 1px solid black; */
+    width: 100%;
     font-size: 2.6rem;
     font-weight: bold;
     text-align: center;
-    margin: .4rem 0;
 }
+
+/* length Bar */
 .lengthGroup{
-    /* border: 1px solid black; */
+    /* border: 1px solid black;  */
     width: 100%;
-    padding: .4rem 0;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .3rem;
 }
 .display-length-box{
     /* border: 1px solid black; */
-    align-self: flex-end;
-    height: 1.1rem;
-    width: 2.3rem;
-    margin: 0 1.1rem .2rem 0;
-    border-radius: .3rem;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
     background-color: #D7ABDA;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 1rem;
     font-weight: bold;
 }
 
 .length-range-bar{
     /* border: 1px solid black; */
-    width: 100%;
+    width: 80%;
     display: flex;
-    justify-content: center;
 }
 .length-range-bar input{
-    width: 92%;
+    /* border: 1px solid black; */
+    width: 100%;
+    height: 3px;
+    appearance: none;
+    background: #000;
+    border-radius: 2px;
+}
+
+/* Checkboxes */
+.category-selector-group{
+    /* border: 1px solid black; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+}
+.select-category{
+    margin: 0 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+    font-size: .9rem;
+}
+.select-category input{
+    /* border: 1px solid black; */
+    height: 15px;
+    width: 15px;
+    accent-color: #6750A4;
 }
