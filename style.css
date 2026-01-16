@@ -12,13 +12,14 @@
 }
 .inner-container{
     /* border: 1px solid black; */
-    height: 26rem;
-    width: 25rem;
+    /* height: 26rem; */
+    /* width: 25rem; */
     margin: auto;
     background-color: #EFE8FF;
     border-radius: .6rem;
     padding: 1rem;
     display: flex;
+    align-items: center;
     flex-direction: column;
     gap: .4rem 0 ;
 }
@@ -27,7 +28,7 @@
 .div-title{
     /* border: 1px solid black; */
     width: 100%;
-    font-size: 2.6rem;
+    font-size: 2.2rem;
     font-weight: bold;
     text-align: center;
 }
@@ -41,6 +42,7 @@
     align-items: center;
     gap: .3rem;
 }
+
 .display-length-box{
     /* border: 1px solid black; */
     height: 2rem;
@@ -56,8 +58,9 @@
 
 .length-range-bar{
     /* border: 1px solid black; */
-    width: 80%;
+    width: 78%;
     display: flex;
+    padding: -2px;
 }
 .length-range-bar input{
     /* border: 1px solid black; */
@@ -84,8 +87,33 @@
     font-size: .9rem;
 }
 .select-category input{
-    /* border: 1px solid black; */
+    border: 1px solid black;
     height: 15px;
     width: 15px;
     accent-color: #6750A4;
+}
+
+/* Generate Button */
+.lengthGroup button{
+    width: 90%;
+    height: 2.2rem;
+    border: none;
+    background-color: #D7ABDA;
+    border-radius: .6rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.526);
+}
+.lengthGroup button:hover{
+    background-color: #cea7d1;
+    
+}
+
+/* Password Field */
+.copyPasswordField{
+    width: 90%;
+    height: 60px;
+    background: #CDBACE;
+    border: 1px solid #000;
+    border-radius: .6rem;
 }
