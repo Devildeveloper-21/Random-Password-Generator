@@ -1,40 +1,48 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Password Generator</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="new.css">
   </head>
   <body>
     <div class="outer-container">
       <div class="inner-container">
-        <div class="div-title">Password Generator</div>
-        <div class="lengthGroup">
-          <div class="length-range-bar">
-            <input type="range" id="passwordLength" />
-          </div>
-          <div class="display-length-box">20</div>
+        <div class="content1">
+          <div class="div-title">Password Generator</div>
         </div>
+        <div class="content2">
+          <div class="lengthGroup">
+            <div class="length-range-bar">
+              <input type="range" id="passwordLengthBar" />
+            </div>
+            <div class="display-length-box" id="lengthBox">0</div>
+          </div>
 
-        <div class="category-selector-group">
-          <div class="select-category">
-            <input type="checkbox" />Numbers (0-9)
+          <div class="category-selector-group">
+            <div class="select-category">
+              <input type="checkbox" id="numberSelector"/>Numbers (0-9)
+            </div>
+            <div class="select-category">
+              <input type="checkbox" id="upperCharSelector" />Capital Letters (A-Z)
+            </div>
+            <div class="select-category">
+              <input type="checkbox" id="lowerCharSelector"/>Small Letters (a-z)
+            </div>
+            <div class="select-category">
+              <input type="checkbox" />Special Characters (!@$&^)
+            </div>
           </div>
-          <div class="select-category">
-            <input type="checkbox" />Capital Letters (A-Z)
+          <div class="PassGenerateButtonClass">
+            <button class="generateButton" id="generatePass">Generate</button>
           </div>
-          <div class="select-category">
-            <input type="checkbox" />Small Letters (a-z)
-          </div>
-          <div class="select-category">
-            <input type="checkbox" />Special Characters (!@$&^)
-          </div>
+          <!-- <div class="copyPasswordField">
+            <i class="fa-regular fa-copy"></i>
+          </div> -->
         </div>
-        <div class="lengthGroup">
-          <button class="generateButton">Generate</button>
-        </div>
-        <div class="copyPasswordField">
-          <i class="fa-regular fa-copy"></i>
+        <div class="content3">
+          <div class="copyPasswordField"></div>
         </div>
       </div>
     </div>

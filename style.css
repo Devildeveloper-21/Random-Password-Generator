@@ -1,119 +1,136 @@
-*{
+/* * {
     margin: 0;
     padding: 0;
 }
-.outer-container{
-    /* border: 1px solid black; */
+
+.outer-container {
     height: 100vh;
     width: 100vw;
     display: flex;
     justify-content: center;
     background-color: #C8AEED;
-}
-.inner-container{
-    /* border: 1px solid black; */
-    /* height: 26rem; */
-    /* width: 25rem; */
-    margin: auto;
-    background-color: #EFE8FF;
-    border-radius: .6rem;
-    padding: 1rem;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: .4rem 0 ;
-}
+} */
+/* 
+    .inner-container {
+        width: fit-content;
+        margin: auto;
+        background-color: #EFE8FF;
+        border-radius: .6rem;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: .4rem;
+    } */
 
 /* Password Generator Title */
-.div-title{
-    /* border: 1px solid black; */
-    width: 100%;
-    font-size: 2.2rem;
+/* .div-title {
+    border: 1px solid black;
+    font-size: 2rem;
     font-weight: bold;
     text-align: center;
-}
+    width: 100%;
+
+
+} */
 
 /* length Bar */
-.lengthGroup{
-    /* border: 1px solid black;  */
-    width: 100%;
+/* .lengthGroup {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: .3rem;
-}
+    gap: .4rem;
+} */
 
-.display-length-box{
-    /* border: 1px solid black; */
-    height: 2rem;
+/* .display-length-box { */
+/* border: 1px solid black; */
+/* height: 2rem;
     width: 2rem;
     border-radius: 50%;
     background-color: #D7ABDA;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1rem;
-    font-weight: bold;
-}
+    font-weight: bold; */
+/* } */
 
-.length-range-bar{
-    /* border: 1px solid black; */
+/* .length-range-bar {
+    border: 1px solid black;
     width: 78%;
     display: flex;
-    padding: -2px;
-}
-.length-range-bar input{
-    /* border: 1px solid black; */
+} */
+
+/* .length-range-bar input {
     width: 100%;
     height: 3px;
     appearance: none;
     background: #000;
     border-radius: 2px;
-}
+    } */
 
 /* Checkboxes */
-.category-selector-group{
-    /* border: 1px solid black; */
-    width: 100%;
+/* .category-selector-group {
+    border: 1px solid black;
+    padding: 0.5rem .5rem .5rem .7rem;
+    width: fit-content;
     display: flex;
     flex-direction: column;
     gap: .7rem;
-}
-.select-category{
+} */
+
+/* .select-category {
     margin: 0 1.4rem;
     display: flex;
     align-items: center;
     gap: .4rem;
     font-size: .9rem;
-}
-.select-category input{
-    border: 1px solid black;
-    height: 15px;
-    width: 15px;
+    width: fit-content;
+} */
+
+/* .select-category input {
     accent-color: #6750A4;
-}
+} */
 
 /* Generate Button */
-.lengthGroup button{
-    width: 90%;
+/* .lengthGroup button {
+    width: 92%;
     height: 2.2rem;
     border: none;
+    margin: .2rem 0;
     background-color: #D7ABDA;
     border-radius: .6rem;
     font-size: 1.4rem;
     font-weight: 700;
-    color: rgba(0, 0, 0, 0.526);
-}
-.lengthGroup button:hover{
+    color: #00000086;
+} */
+
+/* .lengthGroup button:hover {
     background-color: #cea7d1;
-    
-}
+} */
 
 /* Password Field */
-.copyPasswordField{
-    width: 90%;
-    height: 60px;
+/* .copyPasswordField {
+    width: 100%;
+    height: 40px;
     background: #CDBACE;
-    border: 1px solid #000;
+    border: 1px solid #be9393;
     border-radius: .6rem;
+} */
+
+/* 
+.content1 {
+    width: 100%;
+    padding: .6rem;
+    border: 1px solid black;
+    border-radius: 0.2rem 0.2rem 1rem 1rem;
+    margin: 0 1rem;
+
 }
+
+.content2 {
+    width: 100%;
+    padding: .6rem;
+    border: 1px solid black;
+    border-radius: 1rem 1rem 0.2rem 0.2rem;
+    margin: 0 1rem;
+} */

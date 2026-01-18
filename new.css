@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.outer-container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #C8AEED;
+}
+
+.inner-container {
+    width: fit-content;
+    padding: 1rem;
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+/* Content Floating Blocks */
+.content1, .content2, .content3 {
+    width: 100%;
+    padding: .6rem;
+    /* border: 1px solid black; */
+    border-radius: 1rem 1rem .2rem .2rem;
+    margin: 0 1rem;
+    background-color: #F5F0FF;
+}
+
+.content2 {
+    border-radius: .2rem;
+}
+.content3 {
+    border-radius: .2rem .2rem 1rem 1rem;
+}
+
+/* Password Generator Title */
+.div-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+}
+
+/* Length Slider */
+.lengthGroup, .PassGenerateButtonClass{
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .4rem;
+    margin: .4rem 0;
+}
+.display-length-box {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background-color: #D7ABDA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+.length-range-bar {
+    /* border: 1px solid black; */
+    width: 78%;
+    display: flex;
+}
+.length-range-bar input {
+    width: 100%;
+    height: 3px;
+    appearance: none;
+    background: #000;
+    border-radius: 2px;
+    accent-color: #6750A4;
+}
+
+/* Password Categories */
+.category-selector-group {
+    /* border: 1px solid black; */
+    padding: 0.5rem .5rem .5rem .7rem;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin: .3rem 0;
+    gap: .7rem;
+}
+.select-category {
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+    font-size: .9rem;
+    width: fit-content;
+}
+.select-category input {
+    accent-color: #6750A4;
+}
+
+/* Generate Button */
+.PassGenerateButtonClass button {
+    width: 92%;
+    height: 2.2rem;
+    border: none;
+    margin: .2rem 0;
+    background-color: #D7ABDA;
+    border-radius: .6rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #00000086;
+}
+.PassGenerateButtonClass button:hover {
+    background-color: #cea7d1;
+}
+
+/* Password Copy Clipboard */
+.copyPasswordField {
+    width: 100%;
+    height: 40px;
+    background: #E6DEFA;
+    border: 1px solid rgb(153, 144, 144);
+    border-radius: .6rem;
+}
