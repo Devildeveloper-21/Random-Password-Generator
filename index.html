@@ -4,6 +4,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Password Generator</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
   </head>
   <body>
     <div class="outer-container">
@@ -21,16 +29,19 @@
 
           <div class="category-selector-group" id="selectCategory">
             <div class="select-category">
-              <input type="checkbox" id="numberSelector"/>Numbers (0-9)
+              <input type="checkbox" id="numberSelector" />Numbers (0-9)
             </div>
             <div class="select-category">
-              <input type="checkbox" id="upperCharSelector" />Capital Letters (A-Z)
+              <input type="checkbox" id="upperCharSelector" />Capital Letters
+              (A-Z)
             </div>
             <div class="select-category">
-              <input type="checkbox" id="lowerCharSelector"/>Small Letters (a-z)
+              <input type="checkbox" id="lowerCharSelector" />Small Letters
+              (a-z)
             </div>
             <div class="select-category">
-              <input type="checkbox" />Special Characters (!@$&^)
+              <input type="checkbox" id="specialCharSelector" />Special
+              Characters (!@$&^)
             </div>
           </div>
           <div class="PassGenerateButtonClass">
@@ -41,7 +52,10 @@
           </div> -->
         </div>
         <div class="content3">
-          <div class="copyPasswordField"></div>
+          <div class="copyPasswordField">
+            <div class="password" id="passwordBox"></div>
+            <div class="icon"><i class="fas fa-copy copy-btn"></i></div>
+          </div>
         </div>
       </div>
     </div>
