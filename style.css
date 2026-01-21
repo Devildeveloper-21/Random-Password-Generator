@@ -13,7 +13,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #C8AEED;
+    background-color: #1E1B2E;
 }
 
 .inner-container {
@@ -25,6 +25,7 @@ body {
     align-items: center;
     flex-direction: column;
     gap: 0.2rem;
+    color: #D6D3F0;
 }
 
 /* Content Floating Blocks */
@@ -36,7 +37,7 @@ body {
     /* border: 1px solid black; */
     border-radius: 1rem 1rem .2rem .2rem;
     margin: 0 1rem;
-    background-color: #F5F0FF;
+    background-color: #2A2540;
 }
 
 .content2 {
@@ -53,6 +54,7 @@ body {
     font-weight: bold;
     text-align: center;
     width: 100%;
+    color: #FFFFFF;
 }
 
 /* Length Slider */
@@ -70,8 +72,9 @@ body {
     height: 2rem;
     width: 2rem;
     border-radius: 50%;
-    background-color: #D7ABDA;
+    background-color: #6C5CE7;
     display: flex;
+    color: #FFFFFF;
     justify-content: center;
     align-items: center;
     font-weight: bold;
@@ -87,9 +90,9 @@ body {
     width: 100%;
     height: 3px;
     appearance: none;
-    background: #000;
+    background: #4C3F91;
     border-radius: 2px;
-    accent-color: #6750A4;
+    accent-color: #8B7CFF;
 }
 
 /* Password Categories */
@@ -112,7 +115,8 @@ body {
 }
 
 .select-category input {
-    accent-color: #6750A4;
+    accent-color: #8B7CFF;
+    background: #6B63A6;
 }
 
 /* Generate Button */
@@ -121,27 +125,28 @@ body {
     height: 2.2rem;
     border: none;
     margin: .2rem 0;
-    background-color: #D7ABDA;
+    background-color: #6C5CE7;
     border-radius: .6rem;
     font-size: 1.4rem;
     font-weight: 700;
-    color: #00000086;
+    color: #FFFFFF;
 }
 
 .PassGenerateButtonClass button:hover {
-    background-color: #cea7d1;
+    background-color: #5849C2;
 }
 
 /* Password Copy Clipboard */
 .copyPasswordField {
     width: 100%;
     height: 40px;
-    background: #E6DEFA;
-    border: 1px solid rgb(153, 144, 144);
+    background: #1F1C33;
+    border: 1px solid #6C5CE7;
     border-radius: .6rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: #FFFFFF;
 }
 
 .password{

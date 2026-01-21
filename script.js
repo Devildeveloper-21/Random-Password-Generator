@@ -23,13 +23,12 @@ let ptr = 0;
 let randomNumber = Math.floor(Math.random());
 console.log(randomNumber);
 let len = 0,
-  count = 0;
+  CheckboxCounter = 0;
 // Length Bar.
 passwordLengthBar.value = 0;
 passwordLengthBar.addEventListener("change", function (e) {
   len = Math.floor(passwordLengthBar.value / 5);
   lengthBox.innerText = len;
-  count = len;
   // console.log(`Bg No. ${len}`);
 });
 
@@ -37,48 +36,62 @@ passwordLengthBar.addEventListener("change", function (e) {
 function checkCategory() {
   if (numberSelector.checked === true) {
     includeNumber = true;
+    CheckboxCounter++;
+  } else {
+    includeNumber = false;
   }
   if (upperCharSelector.checked === true) {
     includeUpperCase = true;
+    CheckboxCounter++;
+  } else {
+    includeUpperCase = false;
   }
   if (lowerCharSelector.checked === true) {
     includeLowerCase = true;
+    CheckboxCounter++;
+  } else {
+    includeLowerCase = false;
   }
   if (specialCharSelector.checked === true) {
     includeSymbol = true;
+    CheckboxCounter++;
+  } else {
+    includeSymbol = false;
   }
+  if(CheckboxCounter===0){
+    alert("Select a Category..!")
+  }
+
 }
 
 //Password Generator Function.
 function GeneratePass() {
-  while (len != 0) {
+  let tempLen = len;
+
+  while (tempLen != 0) {
     randomNumber = Math.floor(Math.random() * 4);
 
     if (includeNumber === true && randomNumber == 0) {
-      password[ptr] = numbersArray[Math.floor(Math.random() * 10)];
-      ptr++;
-      len--;
+      password.push(numbersArray[Math.floor(Math.random() * 10)]);
+      tempLen--;
     }
     if (includeUpperCase === true && randomNumber == 1) {
-      password[ptr] = uppercaseArray[Math.floor(Math.random() * 26)];
-      ptr++;
-      len--;
+      password.push(uppercaseArray[Math.floor(Math.random() * 26)]);
+      tempLen--;
     }
     if (includeLowerCase === true && randomNumber == 2) {
-      password[ptr] = lowerCaseArray[Math.floor(Math.random() * 26)];
-      ptr++;
-      len--;
+      password.push(lowerCaseArray[Math.floor(Math.random() * 26)]);
+      tempLen--;
     }
     if (includeSymbol === true && randomNumber == 3) {
-      password[ptr] = symbolArray[Math.floor(Math.random() * 6)];
-      ptr++;
-      len--;
+      password.push(symbolArray[Math.floor(Math.random() * 6)]);
+      tempLen--;
     }
   }
 
-  for (let i = 0; i < count; i++) {
-    passwordBox.innerText += password[i];
-  }
+  passwordBox.innerText = " ";
+  passwordBox.innerText = password.join("");
+  password.length = 0;
 }
 
 // Generate Button
