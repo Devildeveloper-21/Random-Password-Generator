@@ -14,54 +14,62 @@ const specialCharSelector = document.getElementById("specialCharSelector");
 const generatePass = document.getElementById("generatePass");
 const passwordBox = document.getElementById("passwordBox");
 
+//Setting Scheckbox Flags.
 let includeNumber = false,
   includeUpperCase = false,
   includeLowerCase = false,
   includeSymbol = false;
+
+//String Storing.
 const password = [];
 let ptr = 0;
 let randomNumber = Math.floor(Math.random());
 console.log(randomNumber);
-let len = 0,
-  CheckboxCounter = 0;
+
+let len = 0;
 // Length Bar.
 passwordLengthBar.value = 0;
 passwordLengthBar.addEventListener("change", function (e) {
   len = Math.floor(passwordLengthBar.value / 5);
   lengthBox.innerText = len;
-  // console.log(`Bg No. ${len}`);
 });
 
 //Is Checkbox checked.
 function checkCategory() {
+
+  let CheckboxCounter = 0;
   if (numberSelector.checked === true) {
     includeNumber = true;
     CheckboxCounter++;
   } else {
     includeNumber = false;
+    CheckboxCounter--;
   }
   if (upperCharSelector.checked === true) {
     includeUpperCase = true;
     CheckboxCounter++;
   } else {
     includeUpperCase = false;
+    CheckboxCounter--;
   }
   if (lowerCharSelector.checked === true) {
     includeLowerCase = true;
     CheckboxCounter++;
   } else {
     includeLowerCase = false;
+    CheckboxCounter--;
   }
   if (specialCharSelector.checked === true) {
     includeSymbol = true;
     CheckboxCounter++;
   } else {
     includeSymbol = false;
+    CheckboxCounter--;
   }
-  if(CheckboxCounter===0){
-    alert("Select a Category..!")
+  if (CheckboxCounter === 0) {
+    alert("Select a Category..!");
+    console.log(CheckboxCounter);
   }
-
 }
 
 //Password Generator Function.
@@ -97,5 +105,9 @@ function GeneratePass() {
 // Generate Button
 generatePass.addEventListener("click", function () {
   checkCategory();
-  GeneratePass();
+  if (len === 0) {
+    alert("Select password length..!");
+  } else {
+    GeneratePass();
+  }
 });
