@@ -3,6 +3,17 @@
     padding: 0;
 }
 
+:root {
+    --primary: #1E1B2E;
+    --Secondary: #2A2540;
+    --Tertiary: #6C5CE7;
+    --firstText: #FFFFFF;
+    --accent: #8B7CFF;
+    --muted: #FFFFFF;
+    --boxBgColor: #1F1C33;
+}
+
+
 body {
     font-family: 'Poppins', sans-serif;
 }
@@ -13,7 +24,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #1E1B2E;
+    background-color: var(--primary);
 }
 
 .inner-container {
@@ -25,7 +36,6 @@ body {
     align-items: center;
     flex-direction: column;
     gap: 0.2rem;
-    color: #D6D3F0;
 }
 
 /* Content Floating Blocks */
@@ -37,7 +47,7 @@ body {
     /* border: 1px solid black; */
     border-radius: 1rem 1rem .2rem .2rem;
     margin: 0 1rem;
-    background-color: #2A2540;
+    background-color: var(--Secondary);
 }
 
 .content2 {
@@ -54,7 +64,7 @@ body {
     font-weight: bold;
     text-align: center;
     width: 100%;
-    color: #FFFFFF;
+    color: var(--firstText);
 }
 
 /* Length Slider */
@@ -72,9 +82,9 @@ body {
     height: 2rem;
     width: 2rem;
     border-radius: 50%;
-    background-color: #6C5CE7;
+    background-color: var(--Tertiary);
     display: flex;
-    color: #FFFFFF;
+    color: var(--muted);
     justify-content: center;
     align-items: center;
     font-weight: bold;
@@ -92,7 +102,7 @@ body {
     appearance: none;
     background: #4C3F91;
     border-radius: 2px;
-    accent-color: #8B7CFF;
+    accent-color: var(--Tertiary);
 }
 
 /* Password Categories */
@@ -112,10 +122,11 @@ body {
     gap: .4rem;
     font-size: .9rem;
     width: fit-content;
+    color: var(--firstText);
 }
 
 .select-category input {
-    accent-color: #8B7CFF;
+    accent-color: var(--accent);
     background: #6B63A6;
 }
 
@@ -125,11 +136,11 @@ body {
     height: 2.2rem;
     border: none;
     margin: .2rem 0;
-    background-color: #6C5CE7;
+    background-color: var(--Tertiary);
     border-radius: .6rem;
     font-size: 1.4rem;
     font-weight: 700;
-    color: #FFFFFF;
+    color: var(--muted);
 }
 
 .PassGenerateButtonClass button:hover {
@@ -140,8 +151,8 @@ body {
 .copyPasswordField {
     width: 100%;
     height: 40px;
-    background: #1F1C33;
-    border: 1px solid #6C5CE7;
+    background: var(--boxBgColor);
+    border: 1px solid var(--Tertiary);
     border-radius: .6rem;
     display: flex;
     justify-content: space-between;
@@ -149,19 +160,19 @@ body {
     color: #FFFFFF;
 }
 
-.password{
+.password {
     width: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.icon{
+.icon {
     width: 10%;
 }
 
 /* Theme Toggle Button  */
-.togglebutton button{
+.togglebutton button {
     width: 3rem;
     height: 3rem;
     border-radius: 50%;
@@ -169,5 +180,5 @@ body {
     position: absolute;
     bottom: 1rem;
     right: 1rem;
-    
+    background-color: var(--primary);
 }
