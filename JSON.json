@@ -1,0 +1,22 @@
+{
+  "Themes": {
+    "lavender": {
+      "--primary": "#1E1B2E",              
+      "--Secondary": "#2A2540",
+      "--Tertiary": "#6C5CE7",
+      "--firstText": "#FFFFFF",
+      "--accent": "#8B7CFF",
+      "--muted": "#FFFFFF",
+      "--boxBgColor": "#1F1C33"
+    },
+    "Mint": {
+      "--primary": "#E8F6F3",
+      "--Secondary": "#FFFFFF",
+      "--Tertiary": "#14B8A6",
+      "--firstText": "#065F46",
+      "--accent": "#14B8A6",
+      "--muted": "#FFFFFF",
+      "--boxBgColor": "#ECFEFF"
+    }
+  }
+}
