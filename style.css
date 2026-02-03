@@ -5,12 +5,14 @@
 
 :root {
     --primary: #1E1B2E;
-    --Secondary: #2A2540;
-    --Tertiary: #6C5CE7;
+    --secondary: #2A2540;
+    --tertiary: #6C5CE7;
     --firstText: #FFFFFF;
     --accent: #8B7CFF;
     --muted: #FFFFFF;
-    --boxBgColor: #1F1C33;
+    --outputBoxBg: #1F1C33;
+    --slideBar: #4C3F91;
+    --toggle: #A29BFE;
 }
 
 
@@ -47,7 +49,7 @@ body {
     /* border: 1px solid black; */
     border-radius: 1rem 1rem .2rem .2rem;
     margin: 0 1rem;
-    background-color: var(--Secondary);
+    background-color: var(--secondary);
 }
 
 .content2 {
@@ -82,7 +84,7 @@ body {
     height: 2rem;
     width: 2rem;
     border-radius: 50%;
-    background-color: var(--Tertiary);
+    background-color: var(--tertiary);
     display: flex;
     color: var(--muted);
     justify-content: center;
@@ -100,9 +102,9 @@ body {
     width: 100%;
     height: 3px;
     appearance: none;
-    background: #4C3F91;
+    background: var(--slideBar);
     border-radius: 2px;
-    accent-color: var(--Tertiary);
+    accent-color: var(--tertiary);
 }
 
 /* Password Categories */
@@ -136,7 +138,7 @@ body {
     height: 2.2rem;
     border: none;
     margin: .2rem 0;
-    background-color: var(--Tertiary);
+    background-color: var(--tertiary);
     border-radius: .6rem;
     font-size: 1.4rem;
     font-weight: 700;
@@ -151,8 +153,8 @@ body {
 .copyPasswordField {
     width: 100%;
     height: 40px;
-    background: var(--boxBgColor);
-    border: 1px solid var(--Tertiary);
+    background: var(--outputBoxBg);
+    border: 1px solid var(--tertiary);
     border-radius: .6rem;
     display: flex;
     justify-content: space-between;
@@ -167,8 +169,11 @@ body {
     align-items: center;
 }
 
-.icon {
+
+.icon i {
     width: 10%;
+    color: var(--tertiary);
+    margin-right: .7rem;
 }
 
 /* Theme Toggle Button  */
@@ -180,5 +185,45 @@ body {
     position: absolute;
     bottom: 1rem;
     right: 1rem;
-    background-color: var(--primary);
+    background-color: var(--toggle);
+}
+
+/* Dropdown */
+.themeDropdown-container {
+    border: .2rem solid #334155;
+    width: 16rem;
+    height: 29rem;
+    background: #1E1E1E;
+    border-radius: .4rem;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    bottom: 5rem;
+    right: 3rem;
+}
+
+.dropdownTitle {
+    /* border: 1px solid white; */
+    font-size: 2rem;
+    margin: .4rem 0 0 0;
+}
+
+.themeOption {
+    /* border: 1px solid white; */
+    width: 13rem;
+    height: 2.5rem;
+    margin: .5rem;
+    background-color: #334155;
+    border-radius: .4rem;
+    display: flex;
+    align-items: center;
+}
+
+.theme {
+    /* border: 1px solid white; */
+    font-weight: 900;
+    font-size: 1.2rem;
+    color: #94A3B8;
+    margin: 0 0 0 .6rem;
 }
