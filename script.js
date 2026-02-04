@@ -68,3 +68,38 @@ generatePass.addEventListener("click", function () {
     GeneratePass();
   }
 });
+
+const popUpThemeButton = document.getElementById("popUpThemeButton");
+const themeDropdownContainer = document.querySelector(
+  ".themeDropdownContainer",
+);
+
+themeDropdownContainer.style.display = "none";
+popUpThemeButton.addEventListener("click", function () {
+  if (themeDropdownContainer.style.display === "none") {
+    themeDropdownContainer.style.display = "flex";
+    themeDropdownContainer.style.animation =
+      "Show-animation 0.4s ease forwards";
+  } else {
+    themeDropdownContainer.style.animation =
+      "hide-animation 0.5s ease forwards";
+
+    themeDropdownContainer.addEventListener(
+      "animationend",
+      function () {
+        themeDropdownContainer.style.display = "none";
+      },
+      { once: true },
+    );
+  }
+});
+
+let currentTheme = null;
+
+const themeCardContainer = document.getElementById("themeCardContainer");
+themeCardContainer.addEventListener("click", function (e) {
+  const theme = e.target.id;
+  document.documentElement.classList.remove(currentTheme);
+  document.documentElement.classList.add(theme);
+  currentTheme = theme;
+});

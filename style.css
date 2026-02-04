@@ -8,7 +8,6 @@
     --secondary: #2A2540;
     --tertiary: #6C5CE7;
     --firstText: #FFFFFF;
-    --accent: #8B7CFF;
     --muted: #FFFFFF;
     --outputBoxBg: #1F1C33;
     --slideBar: #4C3F91;
@@ -128,7 +127,7 @@ body {
 }
 
 .select-category input {
-    accent-color: var(--accent);
+    accent-color: var(--tertiary);
     background: #6B63A6;
 }
 
@@ -146,7 +145,7 @@ body {
 }
 
 .PassGenerateButtonClass button:hover {
-    background-color: #5849C2;
+    background-color: var(--slideBar);
 }
 
 /* Password Copy Clipboard */
@@ -159,11 +158,11 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #FFFFFF;
+    color: var(--firstText);
 }
 
 .password {
-    width: 80%;
+    width: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -173,7 +172,7 @@ body {
 .icon i {
     width: 10%;
     color: var(--tertiary);
-    margin-right: .7rem;
+    margin-right: .4rem;
 }
 
 /* Theme Toggle Button  */
@@ -186,10 +185,11 @@ body {
     bottom: 1rem;
     right: 1rem;
     background-color: var(--toggle);
+    cursor: pointer;
 }
 
 /* Dropdown */
-.themeDropdown-container {
+.themeDropdownContainer {
     border: .2rem solid #334155;
     width: 16rem;
     height: 29rem;
@@ -203,27 +203,63 @@ body {
     right: 3rem;
 }
 
+
 .dropdownTitle {
     /* border: 1px solid white; */
     font-size: 2rem;
     margin: .4rem 0 0 0;
+    color: white;
 }
 
 .themeOption {
     /* border: 1px solid white; */
     width: 13rem;
     height: 2.5rem;
-    margin: .5rem;
     background-color: #334155;
     border-radius: .4rem;
     display: flex;
     align-items: center;
-}
-
-.theme {
-    /* border: 1px solid white; */
     font-weight: 900;
     font-size: 1.2rem;
     color: #94A3B8;
-    margin: 0 0 0 .6rem;
+    padding-left: 0.5rem;
+    cursor: pointer;
+}
+
+
+.themeOptionContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    flex-direction: column;
+}
+
+.themeDropdownContainer.show {
+    animation: show-animation 0.4s ease forwards;
+    pointer-events: auto;
+}
+
+.themeDropdownContainer.hide {
+    animation: hide-animation 0.4s ease forwards;
+}
+
+@keyframes Show-animation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes hide-animation {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
