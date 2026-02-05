@@ -14,6 +14,10 @@ const specialCharSelector = document.getElementById("specialCharSelector");
 const generatePass = document.getElementById("generatePass");
 const passwordBox = document.getElementById("passwordBox");
 let len = 0;
+const popUpThemeButton = document.getElementById("popUpThemeButton");
+let currentTheme = null;
+const themeCardContainer = document.getElementById("themeCardContainer");
+const copyToClipboard = document.getElementById("copyToClipboard");
 
 // Handle Length bar event
 passwordLengthBar.value = 0;
@@ -22,11 +26,11 @@ passwordLengthBar.addEventListener("change", function (e) {
   lengthBox.innerText = len;
 });
 
+let password = [];
 //Password Generator Function.
 function GeneratePass() {
   let tempLen = len,
     randomNumber = -1;
-  let password = [];
 
   while (tempLen != 0) {
     randomNumber = Math.floor(Math.random() * 4);
@@ -69,7 +73,20 @@ generatePass.addEventListener("click", function () {
   }
 });
 
-const popUpThemeButton = document.getElementById("popUpThemeButton");
+copyToClipboard.addEventListener("click",async function () {
+  const passwordBox = document.getElementById("passwordBox");
+  try
+  {
+    await navigator.clipboard.writeText(passwordBox.innerText);
+  }
+  catch(err)
+  {
+    console.log(err);
+    
+alert("Copy failed")
+  }
+});
+
 const themeDropdownContainer = document.querySelector(
   ".themeDropdownContainer",
 );
@@ -79,7 +96,7 @@ popUpThemeButton.addEventListener("click", function () {
   if (themeDropdownContainer.style.display === "none") {
     themeDropdownContainer.style.display = "flex";
     themeDropdownContainer.style.animation =
-      "Show-animation 0.4s ease forwards";
+      "show-animation 0.4s ease forwards";
   } else {
     themeDropdownContainer.style.animation =
       "hide-animation 0.5s ease forwards";
@@ -94,12 +111,51 @@ popUpThemeButton.addEventListener("click", function () {
   }
 });
 
-let currentTheme = null;
-
-const themeCardContainer = document.getElementById("themeCardContainer");
+//Theme related functions and listner
 themeCardContainer.addEventListener("click", function (e) {
   const theme = e.target.id;
+  console.log(e.target);
+  if (!e.target.classList.contains("themeOption")) return;
+
+  loadTheme(theme);
+});
+function loadThemeFromLocalStorage() {
+  let savedTheme = localStorage.getItem("theme");
+  if (!savedTheme) {
+    localStorage.setItem("theme", "lavender");
+    savedTheme = "lavender";
+  }
+  console.log(savedTheme);
+  loadTheme(savedTheme);
+}
+function loadTheme(theme) {
   document.documentElement.classList.remove(currentTheme);
   document.documentElement.classList.add(theme);
+  document.documentElement.animation = "show-animation 0.4s ease forwards";
   currentTheme = theme;
+  themeDropdownContainer.style.animation = "hide-animation 0.5s ease forwards";
+  themeDropdownContainer.addEventListener(
+    "animationend",
+    function () {
+      themeDropdownContainer.style.display = "none";
+    },
+    { once: true },
+  );
+
+  localStorage.setItem("theme", theme);
+}
+document.addEventListener("DOMContentLoaded", () => {
+  loadThemeFromLocalStorage();
+});
+document.body.addEventListener("click", (e) => {
+  if (e.target == themeDropdownContainer || e.target == popUpThemeButton)
+    return;
+  themeDropdownContainer.style.animation = "hide-animation 0.5s ease forwards";
+  themeDropdownContainer.addEventListener(
+    "animationend",
+    function () {
+      themeDropdownContainer.style.display = "none";
+    },
+    { once: true },
+  );
 });
