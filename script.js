@@ -18,6 +18,7 @@ const popUpThemeButton = document.getElementById("popUpThemeButton");
 let currentTheme = null;
 const themeCardContainer = document.getElementById("themeCardContainer");
 const copyToClipboard = document.getElementById("copyToClipboard");
+const copiedIcon = document.getElementById("copiedIcon");
 
 // Handle Length bar event
 passwordLengthBar.value = 0;
@@ -71,20 +72,27 @@ generatePass.addEventListener("click", function () {
   } else {
     GeneratePass();
   }
+  copiedIcon.style.display = "none";
+  copyToClipboard.style.display = "flex";
+  copyToClipboard.style.animation="show-animation 0.4s ease forwards";
 });
 
-copyToClipboard.addEventListener("click",async function () {
-  const passwordBox = document.getElementById("passwordBox");
-  try
-  {
-    await navigator.clipboard.writeText(passwordBox.innerText);
-  }
-  catch(err)
-  {
-    console.log(err);
-    
-alert("Copy failed")
-  }
+copyToClipboard.addEventListener("click", function () {
+  const text = passwordBox.innerText;
+  navigator.clipboard
+    .writeText(text)
+    .then(() => {
+      if (text == "") {
+        return;
+      } else {
+        copiedIcon.style.display = "none" ? "flex" : "none";
+        copiedIcon.style.animation="show-animation 0.4s ease forwards";
+        copyToClipboard.style.display = "flex" ? "none" : "flex";
+      }
+    })
+    .catch((err) => {
+      console.error("Clipboard copy failed:", err);
+    });
 });
 
 const themeDropdownContainer = document.querySelector(
@@ -128,6 +136,7 @@ function loadThemeFromLocalStorage() {
   console.log(savedTheme);
   loadTheme(savedTheme);
 }
+
 function loadTheme(theme) {
   document.documentElement.classList.remove(currentTheme);
   document.documentElement.classList.add(theme);

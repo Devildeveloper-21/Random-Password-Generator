@@ -6,10 +6,10 @@
     --muted: #FFFFFF;
     --outputBoxBg: #1F1C33;
     --slideBar: #4C3F91;
-    --toggle: #A29BFE;
+
 }
 
-.mint{
+.mint {
     --primary: #E8F6F3;
     --secondary: #FFFFFF;
     --tertiary: #14B8A6;
@@ -17,9 +17,9 @@
     --muted: #FFFFFF;
     --outputBoxBg: #ECFEFF;
     --slideBar: #99F6E4;
-    --toggle: #5EEAD4
 }
-.forestGreen{
+
+.forestGreen {
     --primary: #ECFDF5;
     --secondary: #FFFFFF;
     --tertiary: #10B981;
@@ -27,9 +27,10 @@
     --muted: #FFFFFF;
     --outputBoxBg: #8BE9CA;
     --slideBar: #A7F3D0;
-    --toggle: #6EE7B7;
+
 }
-.oceanBreeze{
+
+.oceanBreeze {
     --primary: #EFF6FF;
     --secondary: #FFFFFF;
     --tertiary: #2563EB;
@@ -37,9 +38,10 @@
     --muted: #FFFFFF;
     --outputBoxBg: #DBEAFE;
     --slideBar: #BFDBFE;
-    --toggle: #60A5FA;
+
 }
-.midnightGold{
+
+.midnightGold {
     --primary: #0B0F19;
     --secondary: #111827;
     --tertiary: #FACC15;
@@ -47,9 +49,10 @@
     --muted: #000000;
     --outputBoxBg: #020617;
     --slideBar: #4B5563;
-    --toggle: #FDE68A;
+
 }
-.cyberBlue{
+
+.cyberBlue {
     --primary: #0F172A;
     --secondary: #020617;
     --tertiary: #2563EB;
@@ -57,9 +60,10 @@
     --muted: #FFFFFF;
     --outputBoxBg: #020617;
     --slideBar: #1E40AF;
-    --toggle: #60A5FA;
+
 }
-.peach{
+
+.peach {
     --primary: #FFF1E6;
     --secondary: #FFFFFF;
     --tertiary: #FF8C61;
@@ -67,9 +71,10 @@
     --muted: #FFFFFF;
     --outputBoxBg: #FFF7F3;
     --slideBar: #FFD6C9;
-    --toggle: #FFD6C9;
+
 }
-.softRose{
+
+.softRose {
     --primary: #FDF2F8;
     --secondary: #FFFFFF;
     --tertiary: #EC4899;
@@ -77,5 +82,5 @@
     --muted: #FFFFFF;
     --outputBoxBg: #FFF1F2;
     --slideBar: #FBCFE8;
-    --toggle: #F9A8D4;
+
 }

@@ -11,7 +11,6 @@
     --muted: #FFFFFF;
     --outputBoxBg: #1F1C33;
     --slideBar: #4C3F91;
-    --toggle: #A29BFE;
 }
 
 
@@ -172,7 +171,7 @@ body {
 .icon i {
     width: 10%;
     color: var(--tertiary);
-    margin-right: .4rem;
+    margin-right: .6rem;
 }
 
 /* Theme Toggle Button  */
@@ -184,7 +183,9 @@ body {
     position: absolute;
     bottom: 1rem;
     right: 1rem;
-    background-color: var(--toggle);
+    background: linear-gradient(90deg,
+            var(--slideBar),
+            var(--tertiary));
     cursor: pointer;
 }
 
