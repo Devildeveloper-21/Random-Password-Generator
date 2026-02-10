@@ -139,7 +139,6 @@ function loadThemeFromLocalStorage() {
     localStorage.setItem("theme", "lavender");
     savedTheme = "lavender";
   }
-  console.log(savedTheme);
   loadTheme(savedTheme);
 }
 
