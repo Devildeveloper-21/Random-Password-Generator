@@ -74,7 +74,7 @@ generatePass.addEventListener("click", function () {
   }
   copiedIcon.style.display = "none";
   copyToClipboard.style.display = "flex";
-  copyToClipboard.style.animation="show-animation 0.4s ease forwards";
+  copyToClipboard.style.animation = "show-animation 0.4s ease forwards";
 });
 
 copyToClipboard.addEventListener("click", function () {
@@ -86,7 +86,7 @@ copyToClipboard.addEventListener("click", function () {
         return;
       } else {
         copiedIcon.style.display = "none" ? "flex" : "none";
-        copiedIcon.style.animation="show-animation 0.4s ease forwards";
+        copiedIcon.style.animation = "show-animation 0.4s ease forwards";
         copyToClipboard.style.display = "flex" ? "none" : "flex";
       }
     })
@@ -104,11 +104,12 @@ popUpThemeButton.addEventListener("click", function () {
   if (themeDropdownContainer.style.display === "none") {
     themeDropdownContainer.style.display = "flex";
     themeDropdownContainer.style.animation =
-      "show-animation 0.4s ease forwards";
+    "show-animation 0.4s ease forwards";
+    console.log("bvhgjhg");
   } else {
     themeDropdownContainer.style.animation =
       "hide-animation 0.5s ease forwards";
-
+    
     themeDropdownContainer.addEventListener(
       "animationend",
       function () {
@@ -118,15 +119,20 @@ popUpThemeButton.addEventListener("click", function () {
     );
   }
 });
-
+let currentSelectedTheme = document.getElementById("lavender");
 //Theme related functions and listner
 themeCardContainer.addEventListener("click", function (e) {
   const theme = e.target.id;
-  console.log(e.target);
+  const card = document.getElementById(e.target.id);
+  currentSelectedTheme.classList.remove("selected");
+  currentSelectedTheme = card;
+  card.classList.add("selected");
+
   if (!e.target.classList.contains("themeOption")) return;
 
   loadTheme(theme);
 });
+
 function loadThemeFromLocalStorage() {
   let savedTheme = localStorage.getItem("theme");
   if (!savedTheme) {
@@ -142,15 +148,6 @@ function loadTheme(theme) {
   document.documentElement.classList.add(theme);
   document.documentElement.animation = "show-animation 0.4s ease forwards";
   currentTheme = theme;
-  themeDropdownContainer.style.animation = "hide-animation 0.5s ease forwards";
-  themeDropdownContainer.addEventListener(
-    "animationend",
-    function () {
-      themeDropdownContainer.style.display = "none";
-    },
-    { once: true },
-  );
-
   localStorage.setItem("theme", theme);
 }
 document.addEventListener("DOMContentLoaded", () => {

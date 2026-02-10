@@ -213,7 +213,6 @@ body {
 }
 
 .themeOption {
-    /* border: 1px solid white; */
     width: 13rem;
     height: 2.5rem;
     background-color: #334155;
@@ -227,6 +226,9 @@ body {
     cursor: pointer;
 }
 
+.selected {
+    background-color: #eceff4;
+}
 
 .themeOptionContainer {
     display: flex;
