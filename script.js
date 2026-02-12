@@ -91,7 +91,7 @@ copyToClipboard.addEventListener("click", function () {
       }
     })
     .catch((err) => {
-      console.error("Clipboard copy failed:", err);
+      alert("Clipboard copy failed:");
     });
 });
 
@@ -104,12 +104,12 @@ popUpThemeButton.addEventListener("click", function () {
   if (themeDropdownContainer.style.display === "none") {
     themeDropdownContainer.style.display = "flex";
     themeDropdownContainer.style.animation =
-    "show-animation 0.4s ease forwards";
+      "show-animation 0.4s ease forwards";
     console.log("bvhgjhg");
   } else {
     themeDropdownContainer.style.animation =
       "hide-animation 0.5s ease forwards";
-    
+
     themeDropdownContainer.addEventListener(
       "animationend",
       function () {
@@ -123,12 +123,15 @@ let currentSelectedTheme = document.getElementById("lavender");
 //Theme related functions and listner
 themeCardContainer.addEventListener("click", function (e) {
   const theme = e.target.id;
-  const card = document.getElementById(e.target.id);
-  currentSelectedTheme.classList.remove("selected");
-  currentSelectedTheme = card;
-  card.classList.add("selected");
 
-  if (!e.target.classList.contains("themeOption")) return;
+  if (!e.target.classList.contains("themeOption")) {
+    return;
+  } else {
+    const card = document.getElementById(e.target.id);
+    currentSelectedTheme.classList.remove("selected");
+    currentSelectedTheme = card;
+    card.classList.add("selected");
+  }
 
   loadTheme(theme);
 });
