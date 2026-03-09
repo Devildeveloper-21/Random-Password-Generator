@@ -1,31 +1,38 @@
-<!DOCTYPE html>
+<!doctype html>
 <html ng-app="passwordApp">
-<head>
+  <head>
     <title>Password Generator</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body ng-controller="passwordController">
+  <body ng-controller="passwordController">
+   <div class="container">
+     <div class="title">
+        <h2>Password Generator</h2>
+    </div>
 
-<h2>Password Generator</h2>
+    <div class="passwordLengthContainer">
+      <div class="passwordLengthTitle">
+        <label>Password Length:</label>
+      </div>
+      <div class="passwordInputBox">
+        <input type="number" ng-model="length" min="4" max="30" placeholder="0" />
+      </div>
+    </div>
+    
 
-<label>Password Length:</label>
-<input type="number" ng-model="length" min="4" max="30">
+    <input type="checkbox" ng-model="upper" /> Uppercase
+    <input type="checkbox" ng-model="lower" /> Lowercase
+    <input type="checkbox" ng-model="numbers" /> Numbers
+    <input type="checkbox" ng-model="symbols" /> Symbols
 
-<br><br>
+    <br /><br />
 
-<label><input type="checkbox" ng-model="upper"> Uppercase</label>
-<label><input type="checkbox" ng-model="lower"> Lowercase</label>
-<label><input type="checkbox" ng-model="numbers"> Numbers</label>
-<label><input type="checkbox" ng-model="symbols"> Symbols</label>
+    <button ng-click="generatePassword()">Generate Password</button>
 
-<br><br>
-
-<button ng-click="generatePassword()">Generate Password</button>
-
-<h3>{{password}}</h3>
-
-</body>
-<script src="script.js"></script>
+    <h3>{{password}}</h3>
+   </div>
+  </body>
+  <script src="script.js"></script>
 </html>

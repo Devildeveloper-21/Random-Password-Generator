@@ -2,6 +2,7 @@ body{
 font-family: Arial;
 text-align:center;
 margin-top:100px;
+background: #000000c7;
 }
 
 button{
@@ -11,4 +12,15 @@ font-size:16px;
 
 input{
 margin:5px;
+width: 2rem;
+}
+.container{
+    border: 1px solid white;
+    width: fit-content;
+    margin: auto;
+    padding: 1rem;
+}
+.passwordLengthContainer{
+    display: flex;
+    flex-direction: row;
 }
