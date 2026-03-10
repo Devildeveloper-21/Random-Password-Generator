@@ -5,15 +5,8 @@ const numberArray = "1234567890";
 const symbolArray = "!@#$^";
 
 app.controller("passwordController", function ($scope) {
-  // Function To get password and error on Password Length.
-  function passLength() {
-    if (!$scope.length || $scope.length === 0 || $scope.lenght > 30) {
-      alert("Password length must be between 4 and 30 characters.");
-      $scope.length = 0;
-      return;
-    }
-  }
 
+  
   // Function To Generate Password.
   function createPassword() {
     let password = [];
@@ -36,11 +29,18 @@ app.controller("passwordController", function ($scope) {
         tempLen--;
       }
     }
-    $scope.password=password.join("");
+    $scope.password = password.join("");
   }
 
   $scope.generatePassword = () => {
-    passLength();
-    createPassword();
+    if($scope.length==0 || $scope.length>30 ||isNaN($scope.length)){
+      alert("Select lenght between 4-30.")
+      $scope.length=4;
+    }else if (!$scope.upper && !$scope.lower && !$scope.numbers && !$scope.symbols){
+      alert("Select atleast one password category.")
+      return;
+    }else{
+      createPassword();
+    }
   };
 });

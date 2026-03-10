@@ -7,32 +7,49 @@
   </head>
 
   <body ng-controller="passwordController">
-   <div class="container">
-     <div class="title">
-        <h2>Password Generator</h2>
-    </div>
+    <div class="outerContainer">
+      <div class="innerContainer">
+        <div class="title">
+          <h2>Password Generator</h2>
+        </div>
 
-    <div class="passwordLengthContainer">
-      <div class="passwordLengthTitle">
-        <label>Password Length:</label>
+        <div class="passwordLengthContainer">
+          <div class="lengthBar">
+            <input
+            type="range"
+            ng-model="length"
+            min="4"
+            max="30"
+            placeholder="0"
+            />
+          </div>
+          <div class="passwordLengthBox" ng-model="diplayLenght">
+      ss
+          </div>
+        </div>
+
+        <div class="categoryContainer">
+          <div class="categoryOption">
+            <input type="checkbox" ng-model="upper" />Uppercase(A-Z)
+          </div>
+          <div class="categoryOption">
+            <input type="checkbox" ng-model="lower" />Lowercase(a-z)
+          </div>
+          <div class="categoryOption">
+            <input type="checkbox" ng-model="numbers" />Numbers(0-9)
+          </div>
+          <div class="categoryOption">
+            <input type="checkbox" ng-model="symbols" />Symbols(!@#$^)
+          </div>
+        </div>
+
+        <div class="generateButton">
+          <button ng-click="generatePassword()">Generate Password</button>
+        </div>
+
+        <h3>{{password}}</h3>
       </div>
-      <div class="passwordInputBox">
-        <input type="number" ng-model="length" min="4" max="30" placeholder="0" />
-      </div>
     </div>
-    
-
-    <input type="checkbox" ng-model="upper" /> Uppercase
-    <input type="checkbox" ng-model="lower" /> Lowercase
-    <input type="checkbox" ng-model="numbers" /> Numbers
-    <input type="checkbox" ng-model="symbols" /> Symbols
-
-    <br /><br />
-
-    <button ng-click="generatePassword()">Generate Password</button>
-
-    <h3>{{password}}</h3>
-   </div>
   </body>
   <script src="script.js"></script>
 </html>

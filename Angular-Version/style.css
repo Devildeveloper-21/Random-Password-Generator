@@ -1,26 +1,106 @@
-body{
-font-family: Arial;
-text-align:center;
-margin-top:100px;
-background: #000000c7;
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
 }
-
-button{
-padding:10px 20px;
-font-size:16px;
+.outerContainer{
+width: 100vw;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+background: #0f172a;
 }
-
-input{
-margin:5px;
-width: 2rem;
+.title{
+    font-size: 1.2rem;
+    font-weight: bolder;
 }
-.container{
-    border: 1px solid white;
+.innerContainer{
+    /* border: 1px solid white; */
     width: fit-content;
-    margin: auto;
     padding: 1rem;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: .4rem;
+    background: #1e293b;
+    border-radius: .4rem;
 }
 .passwordLengthContainer{
+    /* border: 1px solid wheat; */
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 .2rem;
+}
+.passwordLengthContainer input{
+    border: none;
+    background: white;
+    width: 14rem;
+    font-size: 1rem;
+    text-align: center;
+    color: black;
+    border-radius: .2rem;
+    appearance: none;
+    height: 1px;
+}
+.lengthBar{
+    display: flex;
+}
+.passwordLengthBox{
+    background: wheat;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0 .4rem 0 0;
+}
+.categoryContainer {
+    /* border: 1px solid white; */
+    padding: 0.5rem .5rem .5rem .7rem;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin: .3rem 0;
+    gap: .7rem;
+}
+
+.categoryOption {
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+    font-size: .9rem;
+    width: fit-content;
+    color: var(--firstText);
+}
+
+.categoryOption input {
+    accent-color:#6B63A6;
+    background: #6B63A6;
+}
+
+.generateButton{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+}
+.generateButton button{
+    width: 92%;
+    height: 2.2rem;
+    border: none;
+    /* margin: .2rem 0; */
+    background-color: #3b82f6;
+    border-radius: .6rem;
+    font-size: 1rem;
+    font-weight: 700;
 }
