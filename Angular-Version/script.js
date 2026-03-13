@@ -5,9 +5,8 @@ const numberArray = "1234567890";
 const symbolArray = "!@#$^";
 
 app.controller("passwordController", function ($scope) {
-
-  
   // Function To Generate Password.
+  $scope.length=0;
   function createPassword() {
     let password = [];
     let tempLen = $scope.length;
@@ -31,15 +30,27 @@ app.controller("passwordController", function ($scope) {
     }
     $scope.password = password.join("");
   }
+  $scope.themeVisible = false;
+  $scope.showThemes = () => {
+    if (!$scope.themeVisible) {
+      $scope.themeVisible = true;
+    }else{
+      $scope.themeVisible=false;
+    }
+  };
 
   $scope.generatePassword = () => {
-    if($scope.length==0 || $scope.length>30 ||isNaN($scope.length)){
-      alert("Select lenght between 4-30.")
-      $scope.length=4;
-    }else if (!$scope.upper && !$scope.lower && !$scope.numbers && !$scope.symbols){
-      alert("Select atleast one password category.")
+    if ($scope.length == 0) {
+      alert("Select password length.");
+    } else if (
+      !$scope.upper &&
+      !$scope.lower &&
+      !$scope.numbers &&
+      !$scope.symbols
+    ) {
+      alert("Select atleast one password category.");
       return;
-    }else{
+    } else {
       createPassword();
     }
   };

@@ -1,16 +1,29 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
 }
-.outerContainer{
-width: 100vw;
-height: 100vh;
-display: flex;
-justify-content: center;
-align-items: center;
-background: #0f172a;
+
+:root {
+    --primary: #1E1B2E;
+    --secondary: #2A2540;
+    --tertiary: #6C5CE7;
+    --firstText: #FFFFFF;
+    --muted: #FFFFFF;
+    --outputBoxBg: #1F1C33;
+    --slideBar: #4C3F91;
 }
+
+
+.outerContainer {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--primary);
+}
+
 .div-title {
     font-size: 1.4rem;
     font-weight: bold;
@@ -18,35 +31,43 @@ background: #0f172a;
     width: 100%;
     color: var(--firstText);
 }
-.title{
-    font-size: 1.2rem;
-    font-weight: bolder;
-}
-.innerContainer{
+
+.innerContainer {
     /* border: 1px solid white; */
     width: fit-content;
     padding: 1rem;
-    margin: 1rem;
+    margin: 0 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: .4rem;
-    background: #1e293b;
+    gap: .5rem;
+    background: var(--secondary);
     border-radius: .4rem;
 }
-.passwordLengthContainer{
+
+.title {
+    /* border: 1px solid white; */
+    font-size: 1.2rem;
+    font-weight: bolder;
+    width: 100%;
+    color: white;
+}
+
+.passwordLengthContainer {
     /* border: 1px solid wheat; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 0 .2rem;
+    margin: .8rem 0 0 0;
+
 }
-.passwordLengthContainer input{
+
+.passwordLengthContainer input {
     border: none;
-    background: white;
+    background: var(--slideBar);
     width: 14rem;
     font-size: 1rem;
     text-align: center;
@@ -54,12 +75,15 @@ background: #0f172a;
     border-radius: .2rem;
     appearance: none;
     height: 1px;
+    accent-color: var(--tertiary);
 }
-.lengthBar{
+
+.lengthBar {
     display: flex;
 }
-.passwordLengthBox{
-    background: wheat;
+
+.passwordLengthBox {
+    background: var(--tertiary);
     height: 2rem;
     width: 2rem;
     border-radius: 50%;
@@ -71,48 +95,80 @@ background: #0f172a;
     font-weight: 700;
     margin: 0 .4rem 0 0;
 }
+
 .categoryContainer {
     /* border: 1px solid white; */
-    padding: 0.5rem .5rem .5rem .7rem;
-    width: fit-content;
+    width: 100%;
+    color: var(--firstText);
     display: flex;
     flex-direction: column;
-    margin: .3rem 0;
-    gap: .7rem;
+    gap: .4rem;
 }
 
 .categoryOption {
     display: flex;
     align-items: center;
     gap: .4rem;
-    font-size: .9rem;
+    font-family: sans-serif;
+    font-size: 1rem;
     width: fit-content;
     color: var(--firstText);
 }
 
 .categoryOption input {
-    accent-color:#6B63A6;
+    accent-color: var(--tertiary);
     background: #6B63A6;
+    height: 1rem;
+    width: 1rem;
 }
 
-.generateButton{
+.generateButton {
+    /* border: 1px solid white; */
     display: flex;
     justify-content: center;
     width: 100%;
     align-items: center;
+    margin: .4rem 0 0 0;
 }
-.generateButton button{
-    width: 92%;
+
+.generateButton button {
+    width: 100%;
     height: 2.2rem;
     border: none;
     /* margin: .2rem 0; */
-    background-color: #3b82f6;
-    border-radius: .6rem;
+    background-color: var(--tertiary);
+    border-radius: .2em;
     font-size: 1rem;
     font-weight: 700;
 }
-.toggleButton button{
-    background: wheat;
+
+.outputField {
+    border: 1px solid var(--tertiary);
+    background: var(--outputBoxBg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 2.2rem;
+    text-align: center;
+    border-radius: .4rem;
+    color: var(--firstText);
+}
+.password{
+    margin: 0 0 0 .4rem;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyIcon i{
+    color: var(--tertiary);
+    margin: 0 .4rem 0 0;
+}
+
+.toggleButton button {
+    background: linear-gradient(90deg, var(--slideBar), var(--tertiary));
     height: 3rem;
     width: 3rem;
     position: fixed;
@@ -120,7 +176,9 @@ background: #0f172a;
     right: 1rem;
     border-radius: 50%;
     border: none;
+    cursor: pointer;
 }
+
 .themeDropdownContainer {
     border: .2rem solid #334155;
     width: 16rem;
@@ -133,14 +191,14 @@ background: #0f172a;
     flex-direction: column;
     bottom: 5rem;
     right: 3rem;
-    display: none;
+    /* display: none; */
 }
 
 
 .dropdownTitle {
     /* border: 1px solid white; */
     font-size: 2rem;
-    margin: .4rem 0 0 0;
+    margin: .4rem 0 0.3rem 0;
     color: white;
 }
 

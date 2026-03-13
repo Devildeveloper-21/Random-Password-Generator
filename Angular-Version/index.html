@@ -4,6 +4,15 @@
     <title>Password Generator</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
     <link rel="stylesheet" href="style.css" />
+        <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
   </head>
 
   <body ng-controller="passwordController">
@@ -18,13 +27,13 @@
             <input
             type="range"
             ng-model="length"
-            min="4"
-            max="30"
+            min="0"
+            max="20"
             placeholder="0"
             />
           </div>
           <div class="passwordLengthBox" ng-model="diplayLenght">
-      ss
+      {{length}}
           </div>
         </div>
 
@@ -47,9 +56,12 @@
           <button ng-click="generatePassword()">Generate Password</button>
         </div>
 
-        <h3>{{password}}</h3>
+        <div class="outputField">
+            <div class="password">{{password}}</div>
+            <div class="copyIcon"><i class="fa-solid fa-clone" ></i></div>
+        </div>
       </div>
-       <div class="themeDropdownContainer">
+       <div class="themeDropdownContainer" ng-show="themeVisible">
           <div class="dropdownTitle div-title">Themes</div>
           <div class="themeOptionContainer" id="themeCardContainer">
             <div class="themeOption"id="lavender">Lavender</div>
