@@ -21,7 +21,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: var(--primary);
+    
+  background: var(--primary);
+  background-attachment: fixed;
+
 }
 
 .div-title {
@@ -51,7 +54,7 @@
     font-size: 1.2rem;
     font-weight: bolder;
     width: 100%;
-    color: white;
+    color: var(--firstText);
 }
 
 .passwordLengthContainer {
@@ -153,16 +156,20 @@
     text-align: center;
     border-radius: .4rem;
     color: var(--firstText);
+    gap: .2rem;
 }
-.password{
+.passwordField{
     margin: 0 0 0 .4rem;
     display: flex;
-    width: 100%;
+    width: 85%;
     justify-content: center;
     align-items: center;
 }
 
-.copyIcon i{
+.copyButton{
+    width: 10%;
+}
+.copyButton i{
     color: var(--tertiary);
     margin: 0 .4rem 0 0;
 }
@@ -225,4 +232,24 @@
     color: #94A3B8;
     padding-left: 0.5rem;
     cursor: pointer;
+}
+
+@keyframes show-animation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes hide-animation {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
